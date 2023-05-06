@@ -1,9 +1,16 @@
 from setuptools import setup, find_packages
 
+desc = """
+pymailauth is a python library which simplifies email setup
+for gmail. It is based on google oauth.
+Please refer readme for more details
+"""
+
 setup(
     name="pymailauth",
-    version="1.1",
+    version="1.2",
     description="Python mail service for GMail",
+    long_description=desc,
     classifiers=[
         "Programming Language :: Python :: 3",
     ],
