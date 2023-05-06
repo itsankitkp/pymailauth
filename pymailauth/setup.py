@@ -8,8 +8,8 @@ Please refer readme for more details
 
 setup(
     name="pymailauth",
-    version="1.2",
-    description="Python mail service for GMail",
+    version="1.2.1",
+    description="Python mail client for GMail",
     long_description=desc,
     classifiers=[
         "Programming Language :: Python :: 3",

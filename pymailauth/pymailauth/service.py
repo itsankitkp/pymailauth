@@ -61,15 +61,15 @@ class Service:
         service = build("gmail", "v1", credentials=credentials)
         return service
 
-    def create_message_body(self, to, subject, body):
-        message = MIMEText(body)
+    def create_message_body(self, to, subject, body, body_type="plain"):
+        message = MIMEText(body, body_type)
         message["to"] = to
         message["subject"] = subject
         return {"raw": base64.urlsafe_b64encode(message.as_bytes()).decode()}
 
-    def send_email(self, to, subject, body):
+    def send_email(self, to, subject, body, body_type="plain"):
         service = self.create_service()
-        create_message = self.create_message_body(to, subject, body)
+        create_message = self.create_message_body(to, subject, body, body_type)
         try:
             message = (
                 service.users()
